@@ -138,15 +138,26 @@ a, a:hover, a:focus, a:active {
   display: flex;
   align-items: center;
 }
-.rightHeader > img:first-of-type {
+.rightHeader > div > img:first-of-type {
   width: 30px;
   height: 30px;
+  margin-right: 20px;
 }
 .rightHeader > img {
   width: 25px;
   height: 25px;
   margin-right: 1vw;
   margin-left: 1vw;
+}
+.rightHeader > div {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-left: 20px;
+  align-items: center;
+}
+.rightHeader > div:hover {
+  cursor: pointer;
 }
 
 .homeWrap {

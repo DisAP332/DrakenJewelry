@@ -2,11 +2,11 @@ import { NavLink } from 'react-router-dom'
 import { Nav } from 'react-bootstrap'
 
 import searchIcon from '../Icons/searchIcon.png'
-import profileIcon from '../Icons/accountIcon.png'
 import bagIcon from '../Icons/bagIcon.png'
 import favoritesIcon from '../Icons/favoritesIcon.png'
 
-export function Navbar() {
+export function Navbar(Props) {
+
     return(
         <div className='headerWrap'>
             <div className='leftHeader'>
@@ -80,8 +80,7 @@ export function Navbar() {
             <div className='rightHeader'>
                 <img src={searchIcon} alt='Icon' />
                 <h3>Search</h3>
-                <img src={profileIcon} alt='Icon' />
-                <h3>My Account</h3>
+                <Props.signIn/>
                 <img src={favoritesIcon} alt='Icon' />
                 <img src={bagIcon} alt='Icon' />
             </div>
