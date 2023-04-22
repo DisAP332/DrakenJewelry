@@ -1,5 +1,12 @@
-import React, { useState } from 'react'
+import { useRef, useState } from 'react'
 import firebase from 'firebase/compat/app'
+import './App.css'
+
+import { Routes, Route } from 'react-router-dom'
+import { Home } from './Pages/Home'
+import { About } from './Pages/About'
+import { Store } from './Pages/Store'
+import { Navbar } from './Components/Navbar'
 
 firebase.initializeApp({
   apiKey: "AIzaSyBy3Vp3L1l_HtsztZMdLXBuVlL99yXvA4M",
@@ -15,7 +22,15 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <div className='appWrap'>
+      <Navbar/>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/Store' element={<Store />}/>
+          <Route path='/About' element={<About />}/>
+        </Routes>
+      </div>
     </div>
   )
 }
